@@ -1,0 +1,22 @@
+{
+	"applicationNameIcon" : "testApp",
+	"applicationName" : "testApp",
+	"icon" : "firefox.png",
+	"splashScreen" : "splashTest.png",
+	"version" : "1.0",
+	"publisher" : "Jerome by Model N",
+	"website" : "http://www.modeln.com",
+	"description" : "Demo app of the mobile framework",
+	"copyright" : "Apache 2 license : see github",
+	"serverUrl" : "https://modeln-serverdev.herokuapp.com/",
+	"target" : [
+		"iphone",
+		"android",
+		"ipad"
+	],
+	"acs-oauth-secret-production" : null,
+	"manifest" : null,
+	"allowVertical" : true,
+	"allowHorizontal" : true,
+	"baseFile" : "test"
+}

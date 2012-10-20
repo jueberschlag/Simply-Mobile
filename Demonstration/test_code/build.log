@@ -1,0 +1,101 @@
+Logfile initialized
+[INFO] logfile = /home/jerome/Bureau/Test/build.log
+[DEBUG] /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/builder.py install testApp /home/jerome/Logiciels/android-sdk-linux /home/jerome/Bureau/Test com.testApp 12
+[INFO] Titanium SDK version: 2.1.1 (07/27/12 14:01 0fd84a2)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 3.046024 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.testApp installed? False
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/images/spinner.png => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/images/spinner.png
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.CollectionUpdate.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.CollectionUpdate.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/backbone.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/backbone.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.DeepModel.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.DeepModel.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/backbone.subset.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/backbone.subset.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/underscore.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/underscore.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/sjcl.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/sjcl.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.Sync.Ti.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.Sync.Ti.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.ModelBinder.Ti.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.ModelBinder.Ti.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.CollectionBinder.Ti.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.CollectionBinder.Ti.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/lib/Backbone.Utils.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/lib/Backbone.Utils.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/android/firefox.png => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/firefox.png
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/android/default.png => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/default.png
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/ui/test.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/ui/test.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/app.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/utils.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/utils.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/controller/dataManagement.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/controller/dataManagement.js
+[TRACE] COPYING CREATED FILE: /home/jerome/Bureau/Test/Resources/controller/loader.js => /home/jerome/Bureau/Test/build/android/bin/assets/Resources/controller/loader.js
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[DEBUG] app stylesheet => /home/jerome/Bureau/Test/build/android/gen/com/testApp/ApplicationStylesheet.java
+[DEBUG] copying app icon: /home/jerome/Bureau/Test/build/android/bin/assets/Resources/firefox.png
+[DEBUG] generating theme.xml
+[DEBUG] found splash screen at /home/jerome/Bureau/Test/build/android/bin/assets/Resources/default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappApplication.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappAppInfo.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappActivity.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/Test/build/android/gen/com/testApp/R.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/Test/build/android/gen/com/testApp/ApplicationStylesheet.java to javac build list
+[DEBUG] Building Java Sources: "/home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappApplication.java" "/home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappAppInfo.java" "/home/jerome/Bureau/Test/build/android/gen/com/testApp/TestappActivity.java" "/home/jerome/Bureau/Test/build/android/gen/com/testApp/R.java" "/home/jerome/Bureau/Test/build/android/gen/com/testApp/ApplicationStylesheet.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /home/jerome/Bureau/Test/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/controller/dataManagement.js
+[DEBUG] from resource zip => assets/Resources/controller/loader.js
+[DEBUG] from resource zip => assets/Resources/images/spinner.png
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.CollectionBinder.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.CollectionUpdate.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.DeepModel.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.ModelBinder.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.Sync.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.Utils.js
+[DEBUG] from resource zip => assets/Resources/lib/backbone.js
+[DEBUG] from resource zip => assets/Resources/lib/backbone.subset.js
+[DEBUG] from resource zip => assets/Resources/lib/sjcl.js
+[DEBUG] from resource zip => assets/Resources/lib/underscore.js
+[DEBUG] from resource zip => assets/Resources/ui/test.js
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/Resources/firefox.png
+[DEBUG] from resource zip => assets/Resources/utils.js
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.007036 seconds on emulator to get ready
+[INFO] Installing application on device
+[INFO] Application installed. Launch from drawer on Home Screen

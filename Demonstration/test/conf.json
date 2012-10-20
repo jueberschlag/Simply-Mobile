@@ -1,0 +1,501 @@
+{	"moduleName" : "test",
+	"autoRefresh" : true,
+	"refreshTime" : "60000",
+	"models" : [
+		{
+			"name" : "Contracts",
+			"isDeepModel" : false,
+			"collection" : "Contracts",
+			"idAttribute" : "_id",
+			"function" : [
+				{
+					"name" : "setIspending",
+					"triggerChange" : ["status"],
+					"functionContent" : " var isProcessed = this.get('status') == 'Pending'; this.set({isPending: isProcessed});"
+				},
+				{
+					"name" : "setIsprocessed",
+					"triggerChange" : ["status"],
+					"functionContent" : " var isProcessed = this.get('status') != 'Pending'; this.set({isProcessed: isProcessed});"
+				},
+				{
+					"name" : "setIsWaitingAction",
+					"triggerChange" : ["status","to"],
+					"functionContent" : "var login = 'jerome'; var isWaitingAction = (this.get('status') == 'Pending' && this.get('to') && this.get('to').indexOf(login) > -1); this.set({isWaitingAction: isWaitingAction});"
+				},
+				{
+					"name" : "ispending",
+					"triggerChange" : [],
+					"functionContent" : "return this.get('status') == 'Pending'"
+				},
+				{
+					"name" : "isprocessed",
+					"triggerChange" : [],
+					"functionContent" : "return thisEl.get('status') != 'Pending'"
+				}
+			],
+			"nestCollection" : [
+				{
+					"attribute" : "comments",
+					"collection" : "Comments"
+				}
+			]
+		},
+		{
+			"name" : "Products",
+			"isDeepModel" : false,
+			"collection" : "Contracts",
+			"idAttribute" : "_id"
+		},
+		{
+			"name" : "Comment",
+			"isDeepModel" : true,
+			"collection" : "Comments",
+			"idAttribute" : "date",
+			"function" : [
+				{
+					"name" : "ispending",
+					"triggerChange" : [],
+					"functionContent" : "return this.get('status') == 'Pending'"
+				},
+				{
+					"name" : "isprocessed",
+					"triggerChange" : [],
+					"functionContent" : "return thisEl.get('status') != 'Pending'"
+				}
+			]
+		}
+	],
+	"collections" : [
+		{
+			"name" : "Contracts",
+			"fetch" : true,
+			"idAttribute" : "_id",
+			"model" : 
+			{
+				"typeAttribute" : "type",
+				"list" : [
+					{ 
+						"type" : "contract",
+						"modelName" : "Contracts"
+					},
+					{
+						"type" : "product",
+						"modelName" : "Products"
+					},
+					{
+						"type" : "comment",
+						"modelName" : "Comment"
+					}
+				]
+			},
+			"defaultModel" : "Contracts",
+			"url" : "https://modeln-serverdev.herokuapp.com/contracts",
+			"subset" : [
+				{ 
+					"name" : "pending",
+					"condition" : "ispending"
+				},
+				{ 
+					"name" : "processed",
+					"condition" : "isprocessed"
+				}
+			],
+			"directory" : "SMapp.user.userDirectory",
+			"encryption" : "SMapp.key"
+		},
+		{
+			"name" : "Comments",
+			"model" : "Comment",
+			"directory" : "SMapp.user.userDirectory",
+			"encryption" : "SMapp.key"
+		}
+	],
+	"require" : [
+		
+	],
+	"views" : [ 
+		{
+			"name": "tabGroup1",
+			"constructorType": "TabGroup",
+			"tabs": [
+				{
+					"name" : "pendingTab",
+					"constructorType" : "Tab",
+					"title" : {
+						"type" : "directValue", 
+						"valueType": "String", 
+						"value": "Pending"
+					},
+					"window" : {
+						"name": "windowPendingTab",
+						"constructorType" : "Window",
+						"model" : "Contractspending",
+						"params": {
+							"title": {
+								"type": "directValue",
+								"valueType": "String", 
+								"value": "Pending"
+							},
+							"layout": {
+								"type": "directValue",
+								"valueType": "String", 
+								"value": "vertical"
+							}
+						},
+						"children": [
+							{
+								"name": "PendingTable",
+								"params" : {},
+								"constructorType": "TableView",
+								"item": "contractItem"
+							}
+						]
+					}
+				},
+				{
+					"name" : "processedTab",
+					"constructorType" : "Tab",
+					"title" : {
+						"type" : "directValue", 
+						"valueType": "String", 
+						"value": "Processed"
+					},
+					"window" : {
+						"name": "windowProcessedTab",
+						"constructorType" : "Window",
+						"model" : "Contractsprocessed",
+						"params": {
+							"title": {
+								"type": "directValue",
+								"valueType": "String", 
+								"value": "Processed"
+							},
+							"layout": {
+								"type": "directValue",
+								"valueType": "String", 
+								"value": "vertical"
+							}
+						},
+						"children": [
+							{
+								"name": "ProcessedTable",
+								"params" : {},
+								"constructorType": "TableView",
+								"item": "contractItem"
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "secondwindow",
+			"constructorType" : "Window",
+			"params": {
+				"title": {
+					"type": "attributeValue",
+					"valueType": "String", 
+					"value": "name"
+				},
+				"layout": {
+					"type": "directValue",
+					"valueType": "String", 
+					"value": "vertical"
+				}
+			},
+			"children": [
+				{
+					"name": "IntermediateView",
+					"constructorType": "View",
+					"params": {
+						"width" : {
+							"type" : "directValue",
+							"valueType": "String", 
+							"value" : "100%"
+						},
+						"layout" : {
+							"type" : "directValue",
+							"valueType": "String", 
+							"value" : "vertical"
+						},
+						"height": {
+							"type": "directValue",
+							"valueType": "Direct",
+							"value": "Titanium.UI.SIZE"
+						}
+					},
+					"children": [
+						{
+							"name": "ContractNameView",
+							"constructorType": "View",
+							"params": {
+								"layout" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "horizontal"
+								},
+								"height": {
+									"type": "directValue",
+									"valueType": "Direct",
+									"value": "Titanium.UI.SIZE"
+								}
+							},
+							"children": [
+								{
+									"name": "ContractNameLabel",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "directValue",
+											"valueType": "String", 
+											"value" : "Contract Name : "
+										}
+									},
+									"children": [
+									]
+								},
+								{
+									"name": "ContractNameLabelValue",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "attributeValue",
+											"valueType": "String", 
+											"value" : "name"
+										}
+									},
+									"children": [
+									]
+								}
+							]
+						},
+						{
+							"name": "ContractValueView",
+							"constructorType": "View",
+							"params": {
+								"layout" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "horizontal"
+								},
+								"height": {
+									"type": "directValue",
+									"valueType": "Direct",
+									"value": "Titanium.UI.SIZE"
+								}
+							},
+							"children": [
+								{
+									"name": "ContractValueLabel",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "directValue",
+											"valueType": "String", 
+											"value" : "Value : "
+										}
+									},
+									"children": [
+									]
+								},
+								{
+									"name": "ContractValueLabelValue",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "attributeValue",
+											"valueType": "String", 
+											"value" : "value"
+										}
+									},
+									"children": [
+									]
+								}
+							]
+						},
+						{
+							"name": "ContractStatusView",
+							"constructorType": "View",
+							"params": {
+								"layout" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "horizontal"
+								},
+								"height": {
+									"type": "directValue",
+									"valueType": "Direct",
+									"value": "Titanium.UI.SIZE"
+								}
+							},
+							"children": [
+								{
+									"name": "ContractStatusLabel",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "directValue",
+											"valueType": "String", 
+											"value" : "Status : "
+										}
+									},
+									"children": [
+									]
+								},
+								{
+									"name": "ContractStatusLabelValue",
+									"constructorType": "Label",
+									"params": {
+										"text" : {
+											"type" : "attributeValue",
+											"valueType": "String", 
+											"value" : "status"
+										}
+									},
+									"children": [
+									]
+								}
+							]
+						},
+						{
+							"name": "ValidateButton",
+							"constructorType": "Button",
+							"params": {
+								"title" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "Validate Contract"
+								},
+								"visible" : {
+									"type" : "attributeValue",
+									"valueType": "String", 
+									"value" : "isPending"
+								}
+							},
+							"children": [
+							],
+							"eventListener" : [
+								{
+									"event" : "click",
+									"action" : {
+										"actionType" : "execute",
+										"executeValue" : "thisModel.set({status : \"Processed\"}); thisModel.collection.onUpdate({model : thisModel});"
+									}
+								}
+							]
+						},
+						{
+							"name": "RejectButton",
+							"constructorType": "Button",
+							"params": {
+								"title" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "Reject Contract"
+								},
+								"visible" : {
+									"type" : "attributeValue",
+									"valueType": "String", 
+									"value" : "isProcessed"
+								}
+							},
+							"children": [
+							],
+							"eventListener" : [
+								{
+									"event" : "click",
+									"action" : {
+										"actionType" : "execute",
+										"executeValue" : "thisModel.set({status : \"Pending\"}); thisModel.collection.onUpdate({model : thisModel});"
+									}
+								}
+							]
+						},
+						{
+							"name": "DetailsButton",
+							"constructorType": "Button",
+							"params": {
+								"title" : {
+									"type" : "directValue",
+									"valueType": "String", 
+									"value" : "PopUp"
+								}
+							},
+							"children": [
+
+							],
+							"eventListener" : [
+								{
+									"event" : "click",
+									"action" : {
+										"actionType" : "execute",
+										"executeValue" : "alert('Popup on click !');"
+									}
+								}
+							]
+						}
+					]
+				}				
+			]
+		},
+		{
+			"name": "contractItem",
+			"constructorType": "TableViewItem",
+			"params": {
+				"width" : {
+					"type" : "directValue",
+					"valueType": "String", 
+					"value" : "100%"
+				},
+				"layout" : {
+					"type" : "directValue",
+					"valueType": "String", 
+					"value" : "vertical"
+				},
+				"height": {
+					"type": "directValue",
+					"valueType": "Direct",
+					"value": "Titanium.UI.SIZE"
+				}
+			},
+			"eventListener" : [
+				{
+					"event" : "click",
+					"action" : {
+						"actionType" : "openWindow",
+						"actionValue" : "secondwindow"
+					}
+				}
+			],
+			"children": [
+				{
+					"name": "ContractNameLabel",
+					"constructorType": "Label",
+					"params": {
+						"text" : {
+							"type" : "attributeValue",
+							"valueType": "String", 
+							"value" : "name"
+						}
+					},
+					"children": [
+					]
+				},
+				{
+					"name": "ContractValueLabel",
+					"constructorType": "Label",
+					"params": {
+						"text" : {
+							"type" : "attributeValue",
+							"valueType": "String", 
+							"value" : "value"
+						}
+					},
+					"children": [
+					]
+				}
+			]
+		}
+	]
+}
