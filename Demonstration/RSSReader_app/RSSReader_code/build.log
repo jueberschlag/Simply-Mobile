@@ -1,0 +1,79 @@
+Logfile initialized
+[INFO] logfile = /home/jerome/Bureau/RSSReader/build.log
+[DEBUG] /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/builder.py install RSS Reader /home/jerome/Logiciels/android-sdk-linux /home/jerome/Bureau/RSSReader com.RSSReader 12
+[INFO] Titanium SDK version: 2.1.1 (07/27/12 14:01 0fd84a2)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.007191 seconds on emulator to get ready
+[DEBUG] com.RSSReader installed? False
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: /home/jerome/Bureau/RSSReader/Resources/ui/RSSReader.js => /home/jerome/Bureau/RSSReader/build/android/bin/assets/Resources/ui/RSSReader.js
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[DEBUG] copying app icon: /home/jerome/Bureau/RSSReader/build/android/bin/assets/Resources/rss.png
+[DEBUG] generating theme.xml
+[DEBUG] copying default splash screen
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderAppInfo.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderApplication.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/R.java to javac build list
+[DEBUG] adding /home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderActivity.java to javac build list
+[DEBUG] Building Java Sources: "/home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderAppInfo.java" "/home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderApplication.java" "/home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/R.java" "/home/jerome/Bureau/RSSReader/build/android/gen/com/RSSReader/RssReaderActivity.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /home/jerome/Bureau/RSSReader/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/controller/dataManagement.js
+[DEBUG] from resource zip => assets/Resources/controller/loader.js
+[DEBUG] from resource zip => assets/Resources/images/spinner.png
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.CollectionBinder.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.CollectionUpdate.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.DeepModel.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.ModelBinder.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.Sync.Ti.js
+[DEBUG] from resource zip => assets/Resources/lib/Backbone.Utils.js
+[DEBUG] from resource zip => assets/Resources/lib/backbone.js
+[DEBUG] from resource zip => assets/Resources/lib/backbone.subset.js
+[DEBUG] from resource zip => assets/Resources/lib/sjcl.js
+[DEBUG] from resource zip => assets/Resources/lib/underscore.js
+[DEBUG] from resource zip => assets/Resources/ui/RSSReader.js
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/rss.png
+[DEBUG] from resource zip => assets/Resources/utils.js
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /home/jerome/.titanium/mobilesdk/linux/2.1.1.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.007593 seconds on emulator to get ready
+[INFO] Installing application on device
+[INFO] Application installed. Launch from drawer on Home Screen

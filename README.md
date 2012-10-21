@@ -1,11 +1,11 @@
 #################################
- MN Mobile Development Framework
+ Simply Mobile -  Mobile Development Framework
 #################################
 
 # Introduction
 
 Our mobile development framework relies on Appcelerator technology to allow you to develop an iPhone / Android native mobile application quickly and easily without writting any code.
-All you have to provide is a configuration file containing informations about your app such as the url from where to fetch data (if you want to have data-binding), the different windows of your application and interactions between windows.
+All you have to provide is a configuration file containing information about your app such as the url from where to fetch data (if you want to have data-binding), the different windows of your application and interactions between windows.
 Currently the part that generate the code for a module which can be included in an existing Appcelerator project is in beta-version and almost ready for a release.
 The part that generate the whole application is in alpha version for the moment.
 
@@ -84,7 +84,7 @@ app.get('/generateApplication', function(request, response) {
     //controller files
     downloadZip.add("Resources/controller/dataManagement.js" , new Buffer(dataManagementFile));
     downloadZip.add("Resources/controller/loader.js" , new Buffer(loaderFile));
-    //TODO android and iphone folders
+
     if (jsonAppParse.icon) {
         downloadZip.add("Resources/android/" + jsonAppParse.icon, new Buffer(appIcon));
         downloadZip.add("Resources/iphone/" + jsonAppParse.icon, new Buffer(appIcon));
@@ -125,6 +125,7 @@ Here is how your folder structure should look:
         - images
 - apps
 	- yourApplicationName
+        - app.json
 		- conf.json
 		- styleSheet.json
 		- images
@@ -154,7 +155,8 @@ Here is a list of attributes that you can put in this file:
 - "allowHorizontal" : unused for now. Will contain a boolean to allow or not the landscape mode (optional, default to true)
 - "baseFile" : string that contain the name of the module in conf.json (required)
 
-Once you have written your application and your configuration files you can use the code in the Getting Started part to download the zip file containing your application files. To build your application you will have to use Appcelerator Studio and import a project from an existing folder (File -> Import -> Existing folder as a new project). Remeber to check "Titanium Mobile" in the check-list.
+Once you have written your application and your configuration files you can use the code in the Getting Started part to download the zip file containing your application files. To build your application you will have to use Appcelerator Studio and import a project from an existing folder (File -> Import -> Existing folder as a new project). Remeber to check "Titanium Mobile" in the check-list.  
+We are currently working on a script to avoid the import in Titanium studio to build your application.
 
 
 # Configuration File  
@@ -192,7 +194,7 @@ Here are all the models attributes:
 Here are all the collections attributes:
 
 - "name": string that contains the name of the collection (required)
-- "fetch": boolean that specified if this collection will be fetched periodically (optional, default to false)
+- "fetch": boolean that specified if this collection will be fetched at creation and periodically (optional, default to false)
 - "idAttribute": string that contains the name of the distinct attribute which will be use to identify a model in this collection (required)
 - "model": string that contains the model name that will be stored in this collection (required). If multiple model types in this colelction then this attribute is an object that contains 2 attributes:
   - "typeAttribute": string that contains the attribute's name of a model that will specified which model to use (required)
@@ -354,13 +356,27 @@ Here is the main part of the configuration file, the place where you build your 
 
 # Demonstration  
 
+For now there is only one demo app but we are currently working on adding 2 or 3 more.
 In the Demonstration folder you can find one folder per demo application. These applications are here to show you how to use the framework and how you can use each attributes of the framework.
-On each folder there are tow sub-folders. The first one is the configuration folder (which contain app.json, conf.json and some other usefull files) and the second one is the folder that contain the source code generated with the configuration files.
+On each folder there are tow sub-folders. The first one is the configuration folder (which contain app.json, conf.json and some other usefull files) and the second one is the folder that contain the source code generated with the configuration files. There is also a web.js file containing an example of server-side code.
 For each demo application you can copy-paste the configuration folder on your Node.js server with a folder-structure as shown on the "Getting started" part.
+There are two demo app right now :
+- the "test" app is an application that allows you to validate / reject some contracts. It shows you how to create subset of collections and use them in differents tabs
+- the "RSS Reader" app is an application that allow you to add a rss source from your mobile and then fetch them to have a list of rss feeds on your phone. It shows you the creation, the modification and the deletion of a model. It is a good example of how to fetch information from different sources (google website, blogs, professional webservices like SAP webservices, ...).
+The next demo application will be an application with login possibilities to have custom informations in your application. We will build a demo application with private chat rooms and someting like that. This application will also show the notifications possibilites since this feature is currently on development.
 
 # Test  
 
-We are currently working on a way to test the fremaework automatically.
+We are currently working on a way to test the framework automatically.
+
+# Roadmap / TODO
+
+Better performance on close of "big" windows (windows that contain lots of rows created from a model)
+Notifications possibilities
+Script to build the app without Titanium Studio
+Script to check the entry file (app.json and conf.json) before app generation
+Analytics possibilities
+
 
 # Copyright
 

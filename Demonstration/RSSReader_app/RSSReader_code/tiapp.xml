@@ -9,24 +9,26 @@
     <property name="ti.android.threadstacksize" type="int">327680</property>
 
     <deployment-targets>
-    <% for (var targetIndex in app.target)  { %>
-        <target device="<%- app.target[targetIndex] %>">true</target>
-    <% } %>
+    
+        <target device="iphone">true</target>
+    
+        <target device="android">true</target>
+    
+        <target device="ipad">true</target>
+    
 
     </deployment-targets>
     <sdk-version>2.1.1.GA</sdk-version>
-    <id>com.<%- app.applicationName %></id>
-    <name><%- app.applicationNameIcon %></name>
-    <version><%- app.version %></version>
-    <publisher><%- app.publisher %></publisher>
-    <url><%- app.website %></url>
-    <description><%- app.description %></description>
-    <copyright><%- app.copyright %></copyright>
-    <% if (app.icon) { %>
-        <icon><%- app.icon %></icon>
-    <% } else { %>
-        <icon>appicon.png</icon>
-    <% } %>
+    <id>com.RSSReader</id>
+    <name>RSS Reader</name>
+    <version>1.0</version>
+    <publisher>Jerome U</publisher>
+    <url>https://github.com/jueberschlag/</url>
+    <description>Demo app of the mobile framework</description>
+    <copyright>MIT license</copyright>
+    
+        <icon>rss.png</icon>
+    
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
     <statusbar-style>default</statusbar-style>
